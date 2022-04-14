@@ -9,12 +9,13 @@ window.onload = function() {
   //write your code here
   console.log("Hello Rigo from the console!");
 };
+
 window.onload = function() {
   let domainName = [];
-  let pronoun = ["the", "your", "my", "ours"];
-  let adj = ["dog", "moon", "yomama", "vape"];
-  let verb = ["bark", "attack", "ran", "ate"];
-  let domain = [".com", ".org", ".net", ".edu"];
+  let pronoun = ["my", "ours"];
+  let adj = ["dog", "vape"];
+  let verb = ["bark", "attack"];
+  let domain = [".com", ".net"];
 
   for (let i = 0; i < pronoun.length; i++) {
     for (let j = 0; j < adj.length; j++) {

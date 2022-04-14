@@ -7,18 +7,42 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  document.querySelector("#button").addEventListener("click", () => {
-    document.querySelector("#domain").innerHTML = domainGen();
-  });
+  console.log("Hello Rigo from the console!");
 };
-let domainGen = () => {
-  let who = ["dog", "moon", "yomama", "vape"];
-  let action = ["bark", "attack", "ran", "ate"];
-  let what = [".com", ".org", ".net", ".edu"];
+window.onload = function() {
+  let domainName = [];
+  let pronoun = ["the", "your", "my", "ours"];
+  let adj = ["dog", "moon", "yomama", "vape"];
+  let verb = ["bark", "attack", "ran", "ate"];
+  let domain = [".com", ".org", ".net", ".edu"];
 
-  let whoIndex = Math.floor(Math.random() * who.length);
-  let actionIndex = Math.floor(Math.random() * action.length);
-  let whatIndex = Math.floor(Math.random() * what.length);
-
-  return `${who[whoIndex]}${action[actionIndex]}${what[whatIndex]}`;
+  for (let i = 0; i < pronoun.length; i++) {
+    for (let j = 0; j < adj.length; j++) {
+      for (let k = 0; k < verb.length; k++) {
+        for (let l = 0; l < domain.length; l++) {
+          domainName.push("  " + pronoun[i] + adj[j] + verb[k] + domain[l]);
+        }
+      }
+    }
+  }
+  console.log(domainName);
+  document.getElementById("domain.results").innerHTML = domainName;
 };
+
+// window.onload = function() {
+//   //write your code here
+//   document.querySelector("#button").addEventListener("click", () => {
+//     document.querySelector("#domain").innerHTML = domainGen();
+//   });
+// };
+// let domainGen = () => {
+//   let who = ["dog", "moon", "yomama", "vape"];
+//   let action = ["bark", "attack", "ran", "ate"];
+//   let what = [".com", ".org", ".net", ".edu"];
+
+//   let whoIndex = Math.floor(Math.random() * who.length);
+//   let actionIndex = Math.floor(Math.random() * action.length);
+//   let whatIndex = Math.floor(Math.random() * what.length);
+
+//   return `${who[whoIndex]}${action[actionIndex]}${what[whatIndex]}`;
+// };

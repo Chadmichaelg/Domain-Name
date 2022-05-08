@@ -8,42 +8,22 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   //write your code here
   console.log("Hello Rigo from the console!");
+  randomWebsite();
 };
 
-window.onload = function() {
-  let domainName = [];
-  let pronoun = ["my", "ours"];
-  let adj = ["dog", "vape"];
-  let verb = ["bark", "attack"];
-  let domain = [".com", ".net"];
+let pronoun = ["My", "Ours", "Your"];
 
-  for (let i = 0; i < pronoun.length; i++) {
-    for (let j = 0; j < adj.length; j++) {
-      for (let k = 0; k < verb.length; k++) {
-        for (let l = 0; l < domain.length; l++) {
-          domainName.push("  " + pronoun[i] + adj[j] + verb[k] + domain[l]);
-        }
-      }
-    }
-  }
-  console.log(domainName);
-  document.getElementById("domain.results").innerHTML = domainName;
-};
+let noun = ["Dog", "Vape", "Lightsaber"];
 
-// window.onload = function() {
-//   //write your code here
-//   document.querySelector("#button").addEventListener("click", () => {
-//     document.querySelector("#domain").innerHTML = domainGen();
-//   });
-// };
-// let domainGen = () => {
-//   let who = ["dog", "moon", "yomama", "vape"];
-//   let action = ["bark", "attack", "ran", "ate"];
-//   let what = [".com", ".org", ".net", ".edu"];
+let verb = ["Bark", "Attack", "Kill"];
 
-//   let whoIndex = Math.floor(Math.random() * who.length);
-//   let actionIndex = Math.floor(Math.random() * action.length);
-//   let whatIndex = Math.floor(Math.random() * what.length);
+var lastItem = pronoun.length;
 
-//   return `${who[whoIndex]}${action[actionIndex]}${what[whatIndex]}`;
-// };
+var selected = Math.floor(Math.random() * lastItem);
+var chosen = Math.floor(Math.random() * lastItem);
+var highlighted = Math.floor(Math.random() * lastItem);
+
+function randomWebsite() {
+  let website = pronoun[selected] + noun[chosen] + verb[highlighted] + ".com";
+  document.querySelector("#website").innerHTML = website;
+}
